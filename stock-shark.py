@@ -1,11 +1,9 @@
 #import the libs
 import streamlit as st
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 import base64
 import sys, os
-plt.style.use('fivethirtyeight')
+
 
 #my own
 from stratMacd import get_macd
@@ -13,7 +11,7 @@ from stratBollinger import get_bollinger
 from stratSMA import get_sma
 from stratMFI import get_mfi
 
-file_ = open(os.path.dirname(os.path.abspath(sys.argv[0])) + "\\shark.gif", "rb")
+file_ = open(os.path.dirname(os.path.abspath(sys.argv[0])) + "/shark.gif", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
