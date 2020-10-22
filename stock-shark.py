@@ -74,7 +74,7 @@ def get_input():
 
 #create a function to get the company name
 def get_company_name(symbol):
-    path = os.path.dirname(os.path.abspath(sys.argv[0])) + "\\game_stocks.csv"
+    path = os.path.dirname(os.path.abspath(sys.argv[0])) + "/game_stocks.csv"
     df = pd.read_csv(path)
     df.set_index('symbol', inplace=True)
     name = df.loc[symbol]['name']
